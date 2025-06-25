@@ -1,4 +1,4 @@
-package com.eyebody.bodycheck_api.community.adapter.in.rest;
+package com.eyebody.bodycheck_api.user.adapter.in.rest;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -20,9 +20,9 @@ import lombok.RequiredArgsConstructor;
 public class AuthController {
 	private final AuthUseCase authUseCase;
 
-	@PostMapping("/register")
-	public ResponseEntity<TokenResponse> register(@RequestBody @Valid SignUpRequest req) {
-		String token = authUseCase.register(req.email(), req.password(), req.nickname());
+	@PostMapping("/signup")
+	public ResponseEntity<TokenResponse> signup(@RequestBody @Valid SignUpRequest req) {
+		String token = authUseCase.signup(req.email(), req.password(), req.nickname());
 		return ResponseEntity.ok(new TokenResponse(token));
 	}
 

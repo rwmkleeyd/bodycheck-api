@@ -19,7 +19,7 @@ public class AuthUseCase {
 	private final JwtTokenProvider jwt;
 
 	@Transactional
-	public String register(String email, String rawPw, String nick) {
+	public String signup(String email, String rawPw, String nick) {
 		assert email != null && rawPw != null && nick != null;
 		userJpaRepository.findByEmail(email).orElseThrow(() -> new RuntimeException("already exists"));
 		User saved = userJpaRepository.save(User.createEntity(email, encoder.encode(rawPw), nick));
