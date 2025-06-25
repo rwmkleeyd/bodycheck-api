@@ -1,4 +1,4 @@
-package com.eyebody.bodycheck_api.community.adapter.out.persistence;
+package com.eyebody.bodycheck_api.community.infra.persistence;
 
 import java.util.Optional;
 

@@ -4,7 +4,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.eyebody.bodycheck_api.community.application.service.CommentAdapter;
+import com.eyebody.bodycheck_api.community.application.usecase.CommentUseCase;
 
 import lombok.RequiredArgsConstructor;
 
@@ -13,7 +13,7 @@ import lombok.RequiredArgsConstructor;
 @RequestMapping("/v1/comments")
 public class CommentController {
 
-	private final CommentAdapter commentAdapter;
+	private final CommentUseCase commentUseCase;
 
 	@GetMapping("/")
 	public String test() {

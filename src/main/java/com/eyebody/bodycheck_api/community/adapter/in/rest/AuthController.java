@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.eyebody.bodycheck_api.community.adapter.in.rest.dto.request.LoginRequest;
 import com.eyebody.bodycheck_api.community.adapter.in.rest.dto.request.SignUpRequest;
 import com.eyebody.bodycheck_api.community.adapter.in.rest.dto.response.TokenResponse;
-import com.eyebody.bodycheck_api.community.application.service.AuthAdapter;
+import com.eyebody.bodycheck_api.community.application.usecase.AuthUseCase;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -18,17 +18,17 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 @RequestMapping("/v1/auth")
 public class AuthController {
-	private final AuthAdapter authAdapter;
+	private final AuthUseCase authUseCase;
 
 	@PostMapping("/register")
 	public ResponseEntity<TokenResponse> register(@RequestBody @Valid SignUpRequest req) {
-		String token = authAdapter.register(req.email(), req.password(), req.nickname());
+		String token = authUseCase.register(req.email(), req.password(), req.nickname());
 		return ResponseEntity.ok(new TokenResponse(token));
 	}
 
 	@PostMapping("/login")
 	public ResponseEntity<TokenResponse> login(@RequestBody @Valid LoginRequest req) {
-		String token = authAdapter.login(req.email(), req.password());
+		String token = authUseCase.login(req.email(), req.password());
 		return ResponseEntity.ok(new TokenResponse(token));
 	}
 }
