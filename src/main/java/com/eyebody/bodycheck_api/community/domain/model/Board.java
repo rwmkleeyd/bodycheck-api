@@ -19,11 +19,20 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Table(name = "boards")
 public class Board {
-
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
 	@Column(name = "name", nullable = false)
 	private String name;
+
+	@Column(name = "description", nullable = false)
+	private String description;
+
+	public void rename(String newName) {
+		if (newName == null || newName.isBlank()) {
+			throw new IllegalArgumentException("Board name cannot be empty");
+		}
+		this.name = newName;
+	}
 }

@@ -1,4 +1,4 @@
-package com.eyebody.bodycheck_api.community.adapter.in.rest.dto.request;
+package com.eyebody.bodycheck_api.user.adapter.in.rest.dto.request;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;

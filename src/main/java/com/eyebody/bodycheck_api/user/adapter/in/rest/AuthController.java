@@ -6,9 +6,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.eyebody.bodycheck_api.community.adapter.in.rest.dto.request.LoginRequest;
-import com.eyebody.bodycheck_api.community.adapter.in.rest.dto.request.SignUpRequest;
-import com.eyebody.bodycheck_api.community.adapter.in.rest.dto.response.TokenResponse;
+import com.eyebody.bodycheck_api.user.adapter.in.rest.dto.request.LoginRequest;
+import com.eyebody.bodycheck_api.user.adapter.in.rest.dto.request.SignUpRequest;
+import com.eyebody.bodycheck_api.user.adapter.in.rest.dto.response.TokenResponse;
 import com.eyebody.bodycheck_api.community.application.usecase.AuthUseCase;
 
 import jakarta.validation.Valid;
