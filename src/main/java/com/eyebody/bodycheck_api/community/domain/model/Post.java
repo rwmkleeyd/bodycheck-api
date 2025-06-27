@@ -1,5 +1,7 @@
 package com.eyebody.bodycheck_api.community.domain.model;
 
+import java.time.LocalDateTime;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -14,7 +16,6 @@ import lombok.NoArgsConstructor;
 
 @Entity
 @Getter
-@Builder
 @AllArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Table(name = "posts")
@@ -24,6 +25,31 @@ public class Post {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	@Column(name = "name", nullable = false)
-	private String name;
+	@Column(nullable = false, length = 100)
+	private String title;
+
+	@Column(nullable = false, columnDefinition = "TEXT")
+	private String content;
+
+	@Column(nullable = false)
+	private Long authorId;
+
+	@Column(nullable = false)
+	private LocalDateTime createdAt = LocalDateTime.now();
+
+	@Column(nullable = false)
+	private LocalDateTime updatedAt = LocalDateTime.now();
+
+	@Builder
+	public Post(String title, String content, Long authorId) {
+		this.title = title;
+		this.content = content;
+		this.authorId = authorId;
+	}
+
+	public void updatePost(String title, String content) {
+		this.title = title;
+		this.content = content;
+		this.updatedAt = LocalDateTime.now();
+	}
 }
