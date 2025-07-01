@@ -1,4 +1,4 @@
-package com.eyebody.bodycheck_api.community.application.usecase;
+package com.eyebody.bodycheck_api.community.application;
 
 import java.util.List;
 
@@ -6,6 +6,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.eyebody.bodycheck_api.community.adapter.rest.dto.res.PostResponse;
+import com.eyebody.bodycheck_api.community.application.in.PostUseCase;
+import com.eyebody.bodycheck_api.community.domain.manager.PostManager;
 import com.eyebody.bodycheck_api.community.domain.model.Post;
 import com.eyebody.bodycheck_api.community.infra.jpa.JpaPostJpaRepository;
 
@@ -14,9 +16,10 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 @Service
 @Transactional(readOnly = true)
-public class PostUseCase {
+public class PostService implements PostUseCase {
 
 	private final JpaPostJpaRepository jpaPostJpaRepository;
+	private final PostManager postManager;
 
 	@Transactional
 	public PostResponse createPost(String title, String content, Long authorId) {

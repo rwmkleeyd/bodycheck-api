@@ -5,7 +5,7 @@ import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.stereotype.Repository;
 
 import com.eyebody.bodycheck_api.community.domain.model.Board;
-import com.eyebody.bodycheck_api.community.domain.repository.BoardRepository;
+import com.eyebody.bodycheck_api.community.application.out.BoardRepository;
 
 @Repository
 public interface JpaBoardJpaRepository

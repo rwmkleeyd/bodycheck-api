@@ -1,4 +1,4 @@
-package com.eyebody.bodycheck_api.community.application.usecase;
+package com.eyebody.bodycheck_api.user.application;
 
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;

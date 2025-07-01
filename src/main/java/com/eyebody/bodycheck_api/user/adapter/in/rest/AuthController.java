@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.eyebody.bodycheck_api.user.adapter.in.rest.dto.request.LoginRequest;
 import com.eyebody.bodycheck_api.user.adapter.in.rest.dto.request.SignUpRequest;
 import com.eyebody.bodycheck_api.user.adapter.in.rest.dto.response.TokenResponse;
-import com.eyebody.bodycheck_api.community.application.usecase.AuthUseCase;
+import com.eyebody.bodycheck_api.user.application.AuthUseCase;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;

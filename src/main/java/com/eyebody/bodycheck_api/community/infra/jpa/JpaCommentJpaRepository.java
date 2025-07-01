@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.stereotype.Repository;
 
 import com.eyebody.bodycheck_api.community.domain.model.Comment;
-import com.eyebody.bodycheck_api.community.domain.repository.CommentRepository;
+import com.eyebody.bodycheck_api.community.application.out.CommentRepository;
 
 @Repository
 public interface JpaCommentJpaRepository extends JpaRepository<Comment, Long>,

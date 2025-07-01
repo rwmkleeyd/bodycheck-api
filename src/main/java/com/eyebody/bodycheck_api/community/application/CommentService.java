@@ -1,4 +1,4 @@
-package com.eyebody.bodycheck_api.community.application.usecase;
+package com.eyebody.bodycheck_api.community.application;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -7,6 +7,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.eyebody.bodycheck_api.community.adapter.rest.dto.res.CommentResponse;
+import com.eyebody.bodycheck_api.community.application.in.CommentUseCase;
+import com.eyebody.bodycheck_api.community.domain.manager.CommentManager;
 import com.eyebody.bodycheck_api.community.domain.model.Comment;
 import com.eyebody.bodycheck_api.community.infra.jpa.JpaCommentJpaRepository;
 
@@ -15,9 +17,10 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 @Service
 @Transactional(readOnly = true)
-public class CommentUseCase {
+public class CommentService implements CommentUseCase {
 
 	private final JpaCommentJpaRepository jpaCommentJpaRepository;
+	private final CommentManager commentManager;
 
 	@Transactional
 	public CommentResponse createComment(Long postId, Long authorId, String content) {
@@ -34,8 +37,9 @@ public class CommentUseCase {
 
 	// TODO: Consider using a DTO instead of Object
 	public List<CommentResponse> listComments(Long postId) {
-		List<Object> collect = jpaCommentJpaRepository.findByPostId(postId)
-			.stream()
+		assert postId != null : "Post ID must not be null";
+		List<Comment> comments = jpaCommentJpaRepository.findByPostId(postId);
+		return comments.stream()
 			.map(CommentResponse::from)
 			.collect(Collectors.toList());
 	}

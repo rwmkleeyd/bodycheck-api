@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.eyebody.bodycheck_api.community.adapter.rest.dto.req.CommentRequest;
 import com.eyebody.bodycheck_api.community.adapter.rest.dto.res.CommentResponse;
-import com.eyebody.bodycheck_api.community.application.usecase.CommentUseCase;
+import com.eyebody.bodycheck_api.community.application.in.CommentUseCase;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;

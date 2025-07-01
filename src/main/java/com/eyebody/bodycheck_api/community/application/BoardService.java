@@ -1,4 +1,4 @@
-package com.eyebody.bodycheck_api.community.application.usecase;
+package com.eyebody.bodycheck_api.community.application;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -10,8 +10,9 @@ import org.springframework.web.server.ResponseStatusException;
 
 import com.eyebody.bodycheck_api.community.adapter.rest.dto.req.BoardRequest;
 import com.eyebody.bodycheck_api.community.adapter.rest.dto.res.BoardResponse;
+import com.eyebody.bodycheck_api.community.application.in.BoardUseCase;
+import com.eyebody.bodycheck_api.community.domain.manager.BoardManager;
 import com.eyebody.bodycheck_api.community.domain.model.Board;
-import com.eyebody.bodycheck_api.community.domain.service.BoardService;
 import com.eyebody.bodycheck_api.community.infra.jpa.JpaBoardJpaRepository;
 
 import lombok.RequiredArgsConstructor;
@@ -19,10 +20,10 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 @Service
 @Transactional(readOnly = true)
-public class BoardUseCase {
+public class BoardService implements BoardUseCase {
 
 	private final JpaBoardJpaRepository jpaBoardJpaRepository;
-	private final BoardService boardService;
+	private final BoardManager boardManager;
 
 	@Transactional
 	public BoardResponse create(BoardRequest req) {
@@ -52,3 +53,4 @@ public class BoardUseCase {
 	}
 
 }
+
