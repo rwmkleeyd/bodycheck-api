@@ -1,4 +1,4 @@
-package com.eyebody.bodycheck_api.community.adapter.in.rest;
+package com.eyebody.bodycheck_api.community.adapter.rest;
 
 import java.util.List;
 
@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.eyebody.bodycheck_api.community.adapter.in.rest.dto.request.BoardRequest;
-import com.eyebody.bodycheck_api.community.adapter.in.rest.dto.response.BoardResponse;
+import com.eyebody.bodycheck_api.community.adapter.rest.dto.req.BoardRequest;
+import com.eyebody.bodycheck_api.community.adapter.rest.dto.res.BoardResponse;
 import com.eyebody.bodycheck_api.community.application.usecase.BoardUseCase;
 
 import jakarta.validation.Valid;

@@ -1,8 +1,7 @@
-package com.eyebody.bodycheck_api.community.adapter.in.rest;
+package com.eyebody.bodycheck_api.community.adapter.rest;
 
 import java.net.URI;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -15,10 +14,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import com.eyebody.bodycheck_api.community.adapter.in.rest.dto.request.PostRequest;
-import com.eyebody.bodycheck_api.community.adapter.in.rest.dto.response.PostResponse;
+import com.eyebody.bodycheck_api.community.adapter.rest.dto.req.PostRequest;
+import com.eyebody.bodycheck_api.community.adapter.rest.dto.res.PostResponse;
 import com.eyebody.bodycheck_api.community.application.usecase.PostUseCase;
-import com.eyebody.bodycheck_api.community.domain.model.Post;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;

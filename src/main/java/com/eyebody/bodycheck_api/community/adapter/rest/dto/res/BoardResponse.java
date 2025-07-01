@@ -1,4 +1,4 @@
-package com.eyebody.bodycheck_api.community.adapter.in.rest.dto.response;
+package com.eyebody.bodycheck_api.community.adapter.rest.dto.res;
 
 import com.eyebody.bodycheck_api.community.domain.model.Board;
 
