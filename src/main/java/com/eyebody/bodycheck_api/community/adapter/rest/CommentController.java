@@ -43,12 +43,12 @@ public class CommentController {
 	}
 
 	@PutMapping("/{id}")
-	public ResponseEntity<CommentResponse> update(
+	public ResponseEntity<Void> update(
 		@PathVariable Long id,
 		@RequestBody @Valid CommentRequest req
 	) {
-		CommentResponse c = commentUseCase.updateComment(id, req.content());
-		return ResponseEntity.ok(toResponse(c));
+		commentUseCase.updateComment(id, req.content());
+		return ResponseEntity.ok().build();
 	}
 
 	@DeleteMapping("/{id}")

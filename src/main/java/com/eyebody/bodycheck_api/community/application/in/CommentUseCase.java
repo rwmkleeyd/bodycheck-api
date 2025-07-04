@@ -11,7 +11,7 @@ public interface CommentUseCase {
 
 	List<CommentResponse> listComments(Long postId);
 
-	CommentResponse updateComment(Long id, String content);
+	void updateComment(Long id, String content);
 
 	void deleteComment(Long id);
 }

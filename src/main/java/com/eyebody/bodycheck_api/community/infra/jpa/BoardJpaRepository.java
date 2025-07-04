@@ -7,9 +7,8 @@ import org.springframework.stereotype.Repository;
 import com.eyebody.bodycheck_api.community.domain.model.Board;
 import com.eyebody.bodycheck_api.community.application.out.BoardRepository;
 
+// 구현체가 사용할 인터페이스를 알고 있으면 됨
 @Repository
-public interface JpaBoardJpaRepository
+public interface BoardJpaRepository
 	extends JpaRepository<Board, Long>, JpaSpecificationExecutor<Board>, BoardRepository {
-	// JpaRepository와 JpaSpecificationExecutor를 상속받아 기본 CRUD 및 스펙 기반 쿼리 기능을 제공
-	// 추가적인 메서드는 필요에 따라 정의할 수 있습니다.
 }

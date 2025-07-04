@@ -8,7 +8,7 @@ public record CommentResponse(
 	Long authorId,
 	String content
 ) {
-	public static Object from(Comment comment) {
+	public static CommentResponse from(Comment comment) {
 		return new CommentResponse(
 			comment.getId(),
 			comment.getPostId(),

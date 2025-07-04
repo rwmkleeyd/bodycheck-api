@@ -10,7 +10,7 @@ import com.eyebody.bodycheck_api.community.domain.model.Comment;
 import com.eyebody.bodycheck_api.community.application.out.CommentRepository;
 
 @Repository
-public interface JpaCommentJpaRepository extends JpaRepository<Comment, Long>,
+public interface CommentJpaRepository extends JpaRepository<Comment, Long>,
 	JpaSpecificationExecutor<Comment>, CommentRepository {
 	List<Comment> findByPostId(Long postId);
 }
