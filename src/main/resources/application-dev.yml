@@ -28,3 +28,7 @@ logging:
 ai:
   service:
     url: http://localhost:8000
+
+llama:
+  base-url: http://localhost:8000   # FastAPI 주소
+  history-limit: 20

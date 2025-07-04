@@ -18,12 +18,14 @@ public class JwtTokenProvider {
 	private final Key key = Keys.secretKeyFor(SignatureAlgorithm.HS256);
 
 	public String generate(Long userId, String role) {
+		Date now = new Date();
+		Date exp = new Date(now.getTime() + 1000L * 60 * 60 * 24); // 24h, 필요한 값으로
 		return Jwts.builder()
-			.setSubject(String.valueOf(userId))
-			.claim("role", role)
-			.setIssuedAt(new Date())
-			.setExpiration(new Date(System.currentTimeMillis() + EXP))
-			.signWith(key)
+			.setSubject(String.valueOf(userId))   // ★ subject = userId
+			.claim("role", role)                  // ★ role 클레임
+			.setIssuedAt(now)
+			.setExpiration(exp)
+			.signWith(key, SignatureAlgorithm.HS256)
 			.compact();
 	}
 
