@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.stereotype.Repository;
 
-import com.eyebody.bodycheck_api.user.application.UserRepository;
+import com.eyebody.bodycheck_api.user.application.in.UserRepository;
 import com.eyebody.bodycheck_api.user.domain.model.User;
 
 @Repository

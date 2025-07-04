@@ -1,4 +1,4 @@
-package com.eyebody.bodycheck_api.user.adapter.in.rest;
+package com.eyebody.bodycheck_api.user.adapter.rest;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.eyebody.bodycheck_api.user.adapter.in.rest.dto.request.LoginRequest;
-import com.eyebody.bodycheck_api.user.adapter.in.rest.dto.request.SignUpRequest;
-import com.eyebody.bodycheck_api.user.adapter.in.rest.dto.response.TokenResponse;
-import com.eyebody.bodycheck_api.user.application.AuthUseCase;
+import com.eyebody.bodycheck_api.user.adapter.rest.dto.req.LoginRequest;
+import com.eyebody.bodycheck_api.user.adapter.rest.dto.req.SignUpRequest;
+import com.eyebody.bodycheck_api.user.adapter.rest.dto.res.TokenResponse;
+import com.eyebody.bodycheck_api.user.application.service.AuthUseCase;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;

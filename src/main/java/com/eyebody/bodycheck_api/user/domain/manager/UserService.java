@@ -1,4 +1,4 @@
-package com.eyebody.bodycheck_api.user.domain.service;
+package com.eyebody.bodycheck_api.user.domain.manager;
 
 public class UserService {
 	// 순수 자바 객체들로만 구성

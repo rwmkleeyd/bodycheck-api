@@ -18,9 +18,10 @@ import org.springframework.context.annotation.Import;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 
-import com.eyebody.bodycheck_api.ai.adapter.in.rest.dto.ChatRequest;
-import com.eyebody.bodycheck_api.ai.adapter.in.rest.dto.ChatResponse;
-import com.eyebody.bodycheck_api.ai.adapter.in.rest.dto.MessageDto;
+import com.eyebody.bodycheck_api.ai.adapter.rest.ChatController;
+import com.eyebody.bodycheck_api.ai.adapter.rest.dto.req.ChatRequest;
+import com.eyebody.bodycheck_api.ai.adapter.rest.dto.res.ChatResponse;
+import com.eyebody.bodycheck_api.ai.adapter.rest.dto.req.MessageDto;
 import com.eyebody.bodycheck_api.ai.application.service.ChatClientAdapter;
 import com.fasterxml.jackson.databind.ObjectMapper;
 

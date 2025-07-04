@@ -1,4 +1,4 @@
-package com.eyebody.bodycheck_api.user.application;
+package com.eyebody.bodycheck_api.user.application.in;
 
 import java.util.List;
 import java.util.Optional;

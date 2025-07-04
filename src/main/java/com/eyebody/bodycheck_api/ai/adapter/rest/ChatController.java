@@ -1,4 +1,4 @@
-package com.eyebody.bodycheck_api.ai.adapter.in.rest;
+package com.eyebody.bodycheck_api.ai.adapter.rest;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.eyebody.bodycheck_api.ai.adapter.in.rest.dto.ChatRequest;
-import com.eyebody.bodycheck_api.ai.adapter.in.rest.dto.ChatResponse;
+import com.eyebody.bodycheck_api.ai.adapter.rest.dto.req.ChatRequest;
+import com.eyebody.bodycheck_api.ai.adapter.rest.dto.res.ChatResponse;
 import com.eyebody.bodycheck_api.ai.application.service.ChatClientAdapter;
 
 import jakarta.validation.Valid;

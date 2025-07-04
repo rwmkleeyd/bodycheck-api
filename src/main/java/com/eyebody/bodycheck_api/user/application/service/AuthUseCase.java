@@ -1,10 +1,11 @@
-package com.eyebody.bodycheck_api.user.application;
+package com.eyebody.bodycheck_api.user.application.service;
 
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.eyebody.bodycheck_api.common.security.JwtTokenProvider;
+import com.eyebody.bodycheck_api.user.application.in.UserRepository;
 import com.eyebody.bodycheck_api.user.domain.model.User;
 
 import lombok.RequiredArgsConstructor;
