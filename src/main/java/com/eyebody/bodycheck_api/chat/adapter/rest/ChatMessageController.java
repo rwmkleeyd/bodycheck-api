@@ -31,7 +31,7 @@ public class ChatMessageController {
 	/** ── DTO ↔ 엔티티 변환 ───────────────────────────────── */
 	private ChatMessageResponse toResponse(ChatMessage e) {
 		return new ChatMessageResponse(
-			e.getId(), e.getUserId(), e.getSessionId(),
+			e.getId(), e.getUser().getId(), e.getSessionId(),
 			e.getRole(), e.getContent(), e.getCreatedAt()
 		);
 	}

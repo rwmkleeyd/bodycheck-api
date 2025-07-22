@@ -25,7 +25,7 @@ public class ChatMessageService implements ChatMessageUseCase {
 	@Transactional
 	public ChatMessage saveUserMessage(Long userId, String sessionId, String content) {
 		return chatMessageRepository.save(
-			new ChatMessage(userId, sessionId, "user", content)
+			new ChatMessage(userId, "user", content)
 		);
 	}
 
@@ -33,7 +33,7 @@ public class ChatMessageService implements ChatMessageUseCase {
 	@Transactional
 	public ChatMessage saveAssistantMessage(Long userId, String sessionId, String content) {
 		return chatMessageRepository.save(
-			new ChatMessage(userId, sessionId, "assistant", content)
+			new ChatMessage(userId,"assistant", content)
 		);
 	}
 

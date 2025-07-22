@@ -49,6 +49,13 @@ dependencies {
 	// Reactor
 	implementation 'io.projectreactor:reactor-core'
 	testImplementation 'io.projectreactor:reactor-test'
+
+	// 스웨거
+	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.8.6'
+
+	// Flyway 항상 core + DB 모듈 세트로 가져오기
+	implementation 'org.flywaydb:flyway-core:11.10.2'         // 엔진
+	runtimeOnly   'org.flywaydb:flyway-database-postgresql:11.10.2' // PostgreSQL 지원
 }
 
 tasks.named('test') {
