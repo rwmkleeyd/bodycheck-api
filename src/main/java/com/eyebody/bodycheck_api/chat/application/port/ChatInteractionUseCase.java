@@ -1,4 +1,4 @@
-package com.eyebody.bodycheck_api.chat.application.in;
+package com.eyebody.bodycheck_api.chat.application.port;
 
 import com.eyebody.bodycheck_api.chat.adapter.rest.dto.res.ChatCompletionResponse;
 

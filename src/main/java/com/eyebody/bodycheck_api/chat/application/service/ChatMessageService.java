@@ -5,41 +5,32 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.eyebody.bodycheck_api.chat.application.in.ChatMessageUseCase;
-import com.eyebody.bodycheck_api.chat.application.out.ChatMessageRepository;
-import com.eyebody.bodycheck_api.chat.domain.manager.ChatMessageManager;
+import com.eyebody.bodycheck_api.chat.application.port.ChatMessageUseCase;
 import com.eyebody.bodycheck_api.chat.domain.model.ChatMessage;
-
-import lombok.RequiredArgsConstructor;
+import com.eyebody.bodycheck_api.chat.domain.port.ChatMessageRepository;
 
 @Service
-@RequiredArgsConstructor
-@Transactional(readOnly = true)
+@Transactional
 public class ChatMessageService implements ChatMessageUseCase {
 
-	private final ChatMessageRepository chatMessageRepository;
-	private final ChatMessageManager chatMessageManager;
+	private final ChatMessageRepository repo;
 
-	/** ── 저장 로직 ─────────────────────────────────────────── */
-	@Override
-	@Transactional
-	public ChatMessage saveUserMessage(Long userId, String sessionId, String content) {
-		return chatMessageRepository.save(
-			new ChatMessage(userId, "user", content)
-		);
+	public ChatMessageService(ChatMessageRepository repo) {
+		this.repo = repo;
 	}
 
 	@Override
-	@Transactional
-	public ChatMessage saveAssistantMessage(Long userId, String sessionId, String content) {
-		return chatMessageRepository.save(
-			new ChatMessage(userId,"assistant", content)
-		);
+	public void saveUserMessage(Long userId, String sessionId, String content) {
+		repo.save(ChatMessage.user(userId, sessionId, content));
 	}
 
-	/** ── 조회 로직 ─────────────────────────────────────────── */
+	@Override
+	public void saveAssistantMessage(Long userId, String sessionId, String content) {
+		repo.save(ChatMessage.assistant(userId, sessionId, content));
+	}
+
 	@Override
 	public List<ChatMessage> recentMessages(Long userId, String sessionId, int limit) {
-		return chatMessageRepository.findRecentByUserAndSession(userId, sessionId, limit);
+		return repo.findRecent(userId, sessionId, limit);
 	}
 }
