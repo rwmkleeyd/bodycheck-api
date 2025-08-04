@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.eyebody.bodycheck_api.chat.adapter.rest.dto.res.ChatCompletionResponse;
+import com.eyebody.bodycheck_api.chat.adapter.in.rest.dto.res.ChatCompletionResponse;
 import com.eyebody.bodycheck_api.chat.application.port.ChatInteractionUseCase;
 import com.eyebody.bodycheck_api.chat.application.port.ChatMessageUseCase;
 import com.eyebody.bodycheck_api.chat.domain.manager.PromptBuilder;

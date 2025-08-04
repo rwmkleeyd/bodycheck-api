@@ -1,6 +1,6 @@
 package com.eyebody.bodycheck_api.chat.application.port;
 
-import com.eyebody.bodycheck_api.chat.adapter.rest.dto.res.ChatCompletionResponse;
+import com.eyebody.bodycheck_api.chat.adapter.in.rest.dto.res.ChatCompletionResponse;
 
 /**
  * "질문 → 프롬프트 조립 → LLaMA 호출 → 로그 저장" 전체 플로우

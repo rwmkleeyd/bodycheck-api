@@ -6,9 +6,9 @@ import java.util.stream.Collectors;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.eyebody.bodycheck_api.community.adapter.rest.dto.res.CommentResponse;
-import com.eyebody.bodycheck_api.community.application.in.CommentUseCase;
-import com.eyebody.bodycheck_api.community.application.out.CommentRepository;
+import com.eyebody.bodycheck_api.community.adapter.in.rest.dto.res.CommentResponse;
+import com.eyebody.bodycheck_api.community.application.port.CommentUseCase;
+import com.eyebody.bodycheck_api.community.domain.port.CommentRepository;
 import com.eyebody.bodycheck_api.community.domain.manager.CommentManager;
 import com.eyebody.bodycheck_api.community.domain.model.Comment;
 

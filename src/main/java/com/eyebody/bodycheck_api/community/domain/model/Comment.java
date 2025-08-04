@@ -2,7 +2,7 @@ package com.eyebody.bodycheck_api.community.domain.model;
 
 import java.time.LocalDateTime;
 
-import com.eyebody.bodycheck_api.community.adapter.rest.dto.res.CommentResponse;
+import com.eyebody.bodycheck_api.community.adapter.in.rest.dto.res.CommentResponse;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

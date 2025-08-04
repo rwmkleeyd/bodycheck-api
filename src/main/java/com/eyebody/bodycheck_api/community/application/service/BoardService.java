@@ -8,10 +8,10 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.server.ResponseStatusException;
 
-import com.eyebody.bodycheck_api.community.adapter.rest.dto.req.BoardRequest;
-import com.eyebody.bodycheck_api.community.adapter.rest.dto.res.BoardResponse;
-import com.eyebody.bodycheck_api.community.application.in.BoardUseCase;
-import com.eyebody.bodycheck_api.community.application.out.BoardRepository;
+import com.eyebody.bodycheck_api.community.adapter.in.rest.dto.req.BoardRequest;
+import com.eyebody.bodycheck_api.community.adapter.in.rest.dto.res.BoardResponse;
+import com.eyebody.bodycheck_api.community.application.port.BoardUseCase;
+import com.eyebody.bodycheck_api.community.domain.port.BoardRepository;
 import com.eyebody.bodycheck_api.community.domain.manager.BoardManager;
 import com.eyebody.bodycheck_api.community.domain.model.Board;
 
