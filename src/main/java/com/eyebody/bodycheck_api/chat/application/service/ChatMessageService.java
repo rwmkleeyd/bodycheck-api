@@ -5,9 +5,9 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.eyebody.bodycheck_api.chat.application.port.ChatMessageUseCase;
+import com.eyebody.bodycheck_api.chat.application.port.in.ChatMessageUseCase;
 import com.eyebody.bodycheck_api.chat.domain.model.ChatMessage;
-import com.eyebody.bodycheck_api.chat.domain.port.ChatMessageRepository;
+import com.eyebody.bodycheck_api.chat.application.port.out.ChatMessageRepository;
 
 @Service
 @Transactional

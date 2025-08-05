@@ -1,4 +1,4 @@
-package com.eyebody.bodycheck_api.community.application.port;
+package com.eyebody.bodycheck_api.community.application.port.in;
 
 import java.util.List;
 

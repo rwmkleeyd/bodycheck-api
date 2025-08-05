@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.eyebody.bodycheck_api.chat.adapter.in.rest.dto.req.ChatMessageRequest;
 import com.eyebody.bodycheck_api.chat.adapter.in.rest.dto.res.ChatCompletionResponse;
-import com.eyebody.bodycheck_api.chat.application.port.ChatInteractionUseCase;
+import com.eyebody.bodycheck_api.chat.application.port.in.ChatInteractionUseCase;
 import com.eyebody.bodycheck_api.common.security.SecurityUtils;
 
 import lombok.RequiredArgsConstructor;

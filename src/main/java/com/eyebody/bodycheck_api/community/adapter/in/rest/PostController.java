@@ -16,7 +16,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.eyebody.bodycheck_api.community.adapter.in.rest.dto.req.PostRequest;
 import com.eyebody.bodycheck_api.community.adapter.in.rest.dto.res.PostResponse;
-import com.eyebody.bodycheck_api.community.application.port.PostUseCase;
+import com.eyebody.bodycheck_api.community.application.port.in.PostUseCase;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;

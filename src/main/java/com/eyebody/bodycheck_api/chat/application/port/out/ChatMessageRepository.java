@@ -1,4 +1,4 @@
-package com.eyebody.bodycheck_api.chat.domain.port;
+package com.eyebody.bodycheck_api.chat.application.port.out;
 
 import java.util.List;
 

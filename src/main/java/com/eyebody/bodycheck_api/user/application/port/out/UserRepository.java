@@ -1,4 +1,4 @@
-package com.eyebody.bodycheck_api.user.domain.port;
+package com.eyebody.bodycheck_api.user.application.port.out;
 
 import java.util.List;
 import java.util.Optional;

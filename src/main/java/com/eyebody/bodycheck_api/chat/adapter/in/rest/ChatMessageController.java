@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.eyebody.bodycheck_api.chat.adapter.in.rest.dto.req.ChatMessageRequest;
 import com.eyebody.bodycheck_api.chat.adapter.in.rest.dto.res.ChatMessageResponse;
-import com.eyebody.bodycheck_api.chat.application.port.ChatMessageUseCase;
+import com.eyebody.bodycheck_api.chat.application.port.in.ChatMessageUseCase;
 import com.eyebody.bodycheck_api.chat.domain.model.ChatMessage;
 import com.eyebody.bodycheck_api.common.security.SecurityUtils;
 

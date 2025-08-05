@@ -6,8 +6,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.eyebody.bodycheck_api.community.adapter.in.rest.dto.res.PostResponse;
-import com.eyebody.bodycheck_api.community.application.port.PostUseCase;
-import com.eyebody.bodycheck_api.community.domain.port.PostRepository;
+import com.eyebody.bodycheck_api.community.application.port.in.PostUseCase;
+import com.eyebody.bodycheck_api.community.application.port.out.PostRepository;
 import com.eyebody.bodycheck_api.community.domain.manager.PostManager;
 import com.eyebody.bodycheck_api.community.domain.model.Post;
 

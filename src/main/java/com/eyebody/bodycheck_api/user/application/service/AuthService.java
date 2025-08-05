@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.eyebody.bodycheck_api.common.security.JwtTokenProvider;
-import com.eyebody.bodycheck_api.user.domain.port.UserRepository;
+import com.eyebody.bodycheck_api.user.application.port.out.UserRepository;
 import com.eyebody.bodycheck_api.user.domain.model.User;
 
 import lombok.RequiredArgsConstructor;

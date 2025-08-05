@@ -10,9 +10,8 @@ import org.springframework.web.server.ResponseStatusException;
 
 import com.eyebody.bodycheck_api.community.adapter.in.rest.dto.req.BoardRequest;
 import com.eyebody.bodycheck_api.community.adapter.in.rest.dto.res.BoardResponse;
-import com.eyebody.bodycheck_api.community.application.port.BoardUseCase;
-import com.eyebody.bodycheck_api.community.domain.port.BoardRepository;
-import com.eyebody.bodycheck_api.community.domain.manager.BoardManager;
+import com.eyebody.bodycheck_api.community.application.port.in.BoardUseCase;
+import com.eyebody.bodycheck_api.community.application.port.out.BoardRepository;
 import com.eyebody.bodycheck_api.community.domain.model.Board;
 
 import lombok.RequiredArgsConstructor;
@@ -26,7 +25,6 @@ public class BoardService implements BoardUseCase {
 
 	// TODO: 포트만 알고 있으면 됨 (구현체는 뭘 쓰던 서비스는 노상관)
 	private final BoardRepository boardRepository;
-	private final BoardManager boardManager;
 
 	@Transactional
 	public BoardResponse create(BoardRequest req) {

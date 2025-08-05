@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.eyebody.bodycheck_api.community.adapter.in.rest.dto.req.BoardRequest;
 import com.eyebody.bodycheck_api.community.adapter.in.rest.dto.res.BoardResponse;
-import com.eyebody.bodycheck_api.community.application.port.BoardUseCase;
+import com.eyebody.bodycheck_api.community.application.port.in.BoardUseCase;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;

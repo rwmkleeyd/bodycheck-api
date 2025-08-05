@@ -8,11 +8,11 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.eyebody.bodycheck_api.chat.adapter.in.rest.dto.res.ChatCompletionResponse;
-import com.eyebody.bodycheck_api.chat.application.port.ChatInteractionUseCase;
-import com.eyebody.bodycheck_api.chat.application.port.ChatMessageUseCase;
+import com.eyebody.bodycheck_api.chat.application.port.in.ChatInteractionUseCase;
+import com.eyebody.bodycheck_api.chat.application.port.in.ChatMessageUseCase;
 import com.eyebody.bodycheck_api.chat.domain.manager.PromptBuilder;
 import com.eyebody.bodycheck_api.chat.domain.model.ChatMessage;
-import com.eyebody.bodycheck_api.chat.domain.port.LlmClient;
+import com.eyebody.bodycheck_api.chat.application.port.out.LlmClient;
 
 /** 대화 전체 흐름을 담당하는 Use‑Case 구현체 */
 @Service
